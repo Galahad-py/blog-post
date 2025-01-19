@@ -1,0 +1,426 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+* {
+  margin: 0;
+}
+body {
+  line-height: 1.2;
+  -webkit-font-smoothing: antialiased;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Inter', sans-serif;
+  /* font-family: 'Poppins', sans-serif; */
+  padding-bottom: 50px;
+}
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+input, button, textarea, select {
+  font: inherit;
+}
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+p {
+  text-wrap: pretty;
+  font-size: 15px;
+}
+h1, h2, h3, h4, h5, h6 {
+  text-wrap: balance;
+}
+#root, #__next {
+  isolation: isolate;
+}
+
+/* container and navigation */
+
+.first-container {
+  display: flex;
+  flex-direction: column;
+  background-color:beige ;
+  padding: 25px 80px;
+  position: relative;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 100px;
+}
+
+.left-nav {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.blog-name {
+  font-size: 13px;
+  font-weight: 400;
+}
+
+.nav-items {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  font-size: 12px;
+  
+}
+
+.nav-items a {
+  text-decoration: none;
+  color: black;
+}
+
+.nav-items a:hover {
+transform: scale(1.02);
+}
+
+.right-nav {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+.login-btn {
+  color: black;
+  background-color: transparent;
+  border: none;
+  font-size: 13px;
+}
+
+.signup-btn {
+  padding: 5px 10px;
+  background-color: black;
+  border: 1px solid black;
+  color: white;
+  font-size: 13px;
+}
+
+.login-btn:hover, .signup-btn:hover {
+transform: scale(1.02);
+}
+
+/* hero */
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 150px;
+  position: relative;
+  z-index: 1;
+}
+
+.developer-label {
+  display: flex;
+  border-radius: 20px;
+  padding: 2px 8px;
+  border: 1px solid black; 
+  font-size: 10px;
+  width: 60px;
+  margin: 0;
+}
+
+.hero h1 {
+  /* line-height: 1.5; */
+  font-size: 60px;
+  font-weight: 600;
+  width: 900px;
+  text-align: center;
+  margin-bottom: 5px;
+}
+
+.hero p {
+  font-size: 15px;
+  font-weight: 400;
+  margin: 0;
+}
+
+/* second-container */
+.second-container {
+padding: 0 150px;
+}
+
+/* featured-image */
+.featured-image {
+width: 100%;
+max-width: 1400px;
+margin: 0 auto;
+position: relative;
+transform: translateY(-100px);
+}
+
+.featured-image img {
+width: 100%;
+height: auto;
+object-fit: cover;
+}
+
+/* content styling */
+.content-section {
+background-color: white;
+margin-top: 10px;
+display: flex;
+justify-content: space-between;
+}
+
+.left-content {
+width: 700px;
+line-height: 1.6;
+}
+
+.right-content {
+display: flex;
+flex-direction: column;
+gap: 30px;
+}
+
+.content-nav {
+display: flex;
+flex-direction: column;
+gap: 15px;
+}
+
+.content-nav, .author, .contributors {
+margin-right: 100px;
+}
+
+.introduction, .featured-quote-subtext {
+margin-bottom: 25px;
+}
+
+.featured-quote, .content-image {
+margin-bottom: 40px;
+}
+
+.featured-quote {
+line-height: 1.5;
+max-width: 600px;
+}
+
+.quote-text {
+font-size: 1.5rem;
+font-weight: 600;
+margin-bottom: 15px;
+quotes: "“" "”";
+}
+
+.quote-text::before {
+content: open-quote;
+}
+
+.quote-text::after {
+content: close-quote;
+}
+
+.quote-author {
+font-size: 0.9rem;
+color: #555555;
+font-weight: 300;
+margin-top: 10px;
+}
+
+.main-text, .software, .resources {
+margin-bottom: 25px;
+}
+
+.main-text h3, .overcame h3, .software h3, .resources h3, .conclusion h3 {
+margin-bottom: 10px;
+}
+
+.overcame {
+margin-bottom: 40px;
+}
+
+.overcame li, .software li {
+margin-bottom: 10px;
+}
+
+.content-nav a {
+text-decoration: none;
+color: #111111;
+font-size: 13px;
+font-weight: 600;
+}
+
+.profile {
+display: flex;
+gap: 10px;
+align-items: center;
+}
+
+.profile img {
+width: 40px;
+height: 40px;
+border-radius: 50%;
+}
+
+.profile div {
+display: flex;
+flex-direction: column;
+gap: 4px;
+}
+
+.author, .contributors {
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+gap: 10px;
+}
+
+.contributors h4, .author h4 {
+margin: 0;
+font-weight: 400;
+font-size: 13px;
+}
+
+.name, .role {
+font-size: 13px;
+}
+
+.name {
+font-weight: 600;
+}
+
+.role {
+color: gray;
+}
+
+.seperator-line {
+width: 100%;
+border: 1px solid rgb(219, 219, 219);
+}
+
+.newsletter {
+display: flex;
+flex-direction: column;
+gap: 20px;
+}
+
+.newsletter p {
+font-size: 13px;
+}
+
+.subscribe-field {
+display: flex;
+flex-direction: column;
+gap: 10px;
+}
+
+#email {
+padding: 15px 15px;
+border: 1px solid black;
+width: 100%;
+font-size: 13px;
+}
+
+.subscribe-btn {
+color: white;
+background-color: black;
+border: none;
+width: 100%;
+padding: 15px 15px;
+font-size: 13px;
+}
+
+.subscribe-btn:hover {
+transform: scale(1.02);
+}
+
+/* mobile styles */
+@media (max-width: 768px) {
+.first-container {
+  padding: 20px;
+}
+
+.nav {
+  flex-direction: column;
+  align-items: flex-start;
+  /* position: relative; */
+}
+
+.left-nav {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+}
+
+.nav-items {
+  display: none; /* Hide menu by default on mobile */
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+  background-color: beige;
+  padding: 0 20px 20px;
+  position: absolute;
+  top: 60px; /* Adjust based on your nav height */
+  left: 0;
+  width: 100%;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 999;
+}
+
+.hamburger {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  cursor: pointer;
+  margin-left: auto;
+}
+
+.hamburger div {
+  width: 20px;
+  height: 3px;
+  background-color: black;
+}
+
+nav.open .nav-items {
+  display: flex; /* Show menu when toggled */
+}
+
+.right-nav {
+  display: none; /* Hide right nav buttons on mobile */
+}
+
+.hero h1 {
+  font-size: 40px;
+  width: auto;
+  padding: 0 10px;
+} 
+
+.second-container {
+  padding: 0 20px;
+}
+
+.content-section {
+  flex-direction: column;
+  gap: 20px;
+}
+
+.left-content {
+  width: 100%;
+}
+
+.right-content {
+  margin-right: 0;
+}
+
+.featured-image {
+  transform: translateY(-50px);
+}
+
+.developer-label {
+  font-size: 8px;
+  padding: 2px 5px;
+}
+
+.conclusion {
+  margin-bottom: 30px;
+}
+}
